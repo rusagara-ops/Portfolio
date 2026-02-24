@@ -33,7 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const storedTheme = window.localStorage.getItem("kr-theme");
-  applyTheme(storedTheme === "light" ? "light" : "dark");
+  if (storedTheme === "light" || storedTheme === "dark") {
+    applyTheme(storedTheme);
+  } else {
+    // Default to light theme on first visit
+    applyTheme("light");
+  }
 
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {

@@ -367,6 +367,26 @@ body.theme-light .site-header {
   font-size: clamp(2.4rem, 3vw, 2.8rem);
   letter-spacing: -0.05em;
 }
+.hero-photo {
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.95);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+body.theme-light .hero-photo {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.08);
+}
 
 .hero-subtitle {
   margin: 0 0 18px;
@@ -593,36 +613,6 @@ body.theme-light .hero-card-list li span:last-child {
   flex-direction: column;
   gap: 12px;
   align-items: flex-start;
-}
-
-.contact-box {
-  width: 100%;
-  padding: 14px;
-  border-radius: 18px;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-soft);
-  box-shadow: var(--shadow-subtle);
-}
-
-body.theme-light .contact-box {
-  background: #000000;
-  border-color: rgba(0, 0, 0, 0.85);
-  color: #ffffff;
-}
-
-body.theme-light .contact-box .btn-primary {
-  background: #ffffff;
-  color: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-}
-
-body.theme-light .contact-box .contact-links a {
-  color: rgba(229, 229, 229, 0.92);
-}
-
-body.theme-light .contact-box .contact-links a:hover {
-  color: #ffffff;
 }
 
 .contact-links {

@@ -84,11 +84,11 @@
               to operate and straightforward to extend.
             </p>
             <p>
-              Recently, that’s looked like building infrastructure for a hyperspectral imaging
-              ecosystem at Yale–NSF, automating RF testing workflows at UL Solutions, and shipping
-              a bug-tracking backend that my team actually depended on day to day. I care about
-              clear abstractions, good docs, and collaborating closely with the people who use what
-              I build.
+              Recently, that’s looked like shipping MCP-based automation and AI agents at Dispatch
+              Energy, building hyperspectral imaging infrastructure at Yale–NSF, and designing a
+              HIPAA-aligned home-care platform used in a live clinical pilot. I care about clear
+              abstractions, good docs, and collaborating closely with the people who use what I
+              build.
             </p>
           </div>
         </div>
@@ -104,23 +104,48 @@
             <article class="timeline-item">
               <header>
                 <div>
-                  <h3>Software Developer · Yale University &amp; NSF</h3>
+                  <h3>Software Engineer Intern · Dispatch Energy</h3>
+                  <p class="meta">New York, NY · Summer 2026</p>
+                </div>
+              </header>
+              <ul>
+                <li>
+                  Engineered MCP-based automation tools for analysts, reducing recurring project
+                  diligence and market research workflows from 3 hours to 3 minutes—a 98.3% decrease
+                  in manual analysis time.
+                </li>
+                <li>
+                  Built an AI contract compliance agent that validates proposed actions, emails, and
+                  workflow changes against entity-specific contract clauses, flags potential
+                  breaches, and routes outputs for human review in under 5 minutes.
+                </li>
+                <li>
+                  Developed an ISO-level electricity market prediction tool that integrated cleaned
+                  market datasets with analyst inputs to support forecasting, validation, and
+                  investment decision-making across multiple power markets.
+                </li>
+              </ul>
+            </article>
+
+            <article class="timeline-item">
+              <header>
+                <div>
+                  <h3>Software Engineer · Yale University &amp; NSF</h3>
                   <p class="meta">New Haven, CT · Aug 2025 – Present</p>
                 </div>
               </header>
               <ul>
                 <li>
-                  Build and maintain the core software for an open hyperspectral imaging ecosystem,
-                  including data pipelines and converters for ENVI, BIL, BIP, BSQ, GeoTIFF, and PNG
-                  formats.
+                  Building software infrastructure for a hyperspectral imaging ecosystem that helps
+                  researchers analyze materials and biological samples beyond the visible spectrum.
                 </li>
                 <li>
-                  Ship React-based Assembler and Dashboard modules that let researchers explore,
-                  convert, and manage large spectral datasets without fighting the tooling.
+                  Developing React-based dashboard tools for visualizing, transforming, and managing
+                  high-dimensional spectral image datasets.
                 </li>
                 <li>
-                  Work with scientists and engineers to standardize workflows and make experiments
-                  easier to reproduce.
+                  Building data conversion pipelines that standardize complex hyperspectral image
+                  files into formats researchers can process, compare, and share.
                 </li>
               </ul>
             </article>
@@ -134,16 +159,14 @@
               </header>
               <ul>
                 <li>
-                  Wrote Python automation to control RF test equipment and orchestrate SAR
-                  measurements, cutting down on manual setup and making runs more repeatable.
+                  Developed Python automation tools to control RF test equipment and orchestrate SAR
+                  measurement workflows, reducing manual setup time and improving test
+                  repeatability.
                 </li>
                 <li>
-                  Paired with RF and embedded engineers to debug flaky workflows and capture them as
-                  clear, reproducible procedures.
-                </li>
-                <li>
-                  Built small tools for firmware version tracking and reporting so teams knew
-                  exactly what had been tested.
+                  Partnered with RF and embedded systems engineers to debug test workflows, document
+                  compliance processes, and build scripts for firmware version tracking and
+                  reporting.
                 </li>
               </ul>
             </article>
@@ -171,17 +194,21 @@
               <header>
                 <div>
                   <h3>Software Engineer Extern · Citadel Securities</h3>
-                  <p class="meta">New York, NY (Hybrid) · May 2024 – Aug 2024</p>
+                  <p class="meta">New York, NY · May 2024 – Aug 2024</p>
                 </div>
               </header>
               <ul>
                 <li>
-                  Built a Python &amp; Flask web app that tracked expenses and simulated portfolio
-                  performance using real-time market data APIs.
+                  Built a Python-based market simulation tool to backtest trading strategies against
+                  historical and real-time market data.
                 </li>
                 <li>
-                  Experimented with trading strategies in a simulation environment and learned how
-                  quantitative workflows are wired together in practice.
+                  Implemented moving-average and momentum-based signal logic to simulate buy/sell
+                  decisions across time-series price data.
+                </li>
+                <li>
+                  Compared strategy performance using portfolio returns, volatility, drawdown, and
+                  risk-adjusted performance metrics.
                 </li>
               </ul>
             </article>
@@ -189,18 +216,19 @@
             <article class="timeline-item">
               <header>
                 <div>
-                  <h3>Backend Software Engineer Intern · Awesomity Lab</h3>
+                  <h3>Backend Engineer Intern · Awesomity Lab</h3>
                   <p class="meta">Kigali, Rwanda · Jun 2024 – Aug 2024</p>
                 </div>
               </header>
               <ul>
                 <li>
-                  Built the backend for Provigator, a bug-tracking system used internally to manage
-                  and resolve 320+ software issues.
+                  Developed the backend for Provigator, a production bug-tracking system used
+                  internally to manage and resolve 320+ software issues.
                 </li>
                 <li>
-                  Implemented FastAPI-based REST APIs backed by SQLite for users, projects, and
-                  clients, with Google OAuth for authentication.
+                  Implemented RESTful APIs with FastAPI and SQLite, supporting full CRUD operations
+                  for users, projects, clients, and client-project relationships, and integrated
+                  Google OAuth authentication.
                 </li>
               </ul>
             </article>
@@ -214,42 +242,88 @@
             <p class="eyebrow">Projects</p>
             <h2 id="projects-title">Some things I’ve built</h2>
             <p class="section-kicker">
-              A mix of research tooling, backend systems, and applied machine learning work.
+              A mix of production platforms, backend systems, and applied AI work.
             </p>
           </div>
           <div class="section-body project-grid">
             <article class="project-card">
               <header>
                 <h3>AI Agent Identity &amp; RAG Gateway</h3>
-                <p class="meta">Python · FastAPI · JWT · OAuth2 · FAISS · LangChain · Docker</p>
+                <p class="meta">Python · FastAPI · JWT · FAISS · LangChain</p>
               </header>
               <p>
-                A backend that treats AI agents like real users, with identity, permissions, and a
-                controlled way to access tools and documents.
+                A backend system for secure AI agent access with JWT authentication, role-based
+                permissions, and controlled query execution across private knowledge sources.
               </p>
               <ul class="project-points">
-                <li>Protected REST APIs using JWTs and fine-grained permission scopes.</li>
                 <li>
-                  RAG pipeline built on FAISS vector search with access-controlled document
-                  retrieval and structured logging for each request.
+                  Implemented a RAG pipeline using FAISS vector search and LangChain to retrieve
+                  relevant documents across private knowledge sources.
+                </li>
+                <li>
+                  Designed permissioned REST APIs for tool execution, document retrieval, and
+                  traceable access across AI-assisted workflows.
                 </li>
               </ul>
               <div class="project-footer">
-                <span class="pill">Backend</span>
-                <span class="pill">Agentic AI</span>
-                <a
-                  class="project-link"
-                  href="https://github.com/rusagara-ops/ai-agent-identity-gateway"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="View projects related to AI Agent Identity & RAG Gateway on Kevin's GitHub"
-                >
-                  View related work
-                </a>
+                <div class="project-tags">
+                  <span class="pill">Backend</span>
+                  <span class="pill">Agentic AI</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link"
+                    href="https://github.com/rusagara-ops/ai-agent-identity-gateway"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </article>
 
             <article class="project-card">
+              <header>
+                <h3>High Street Health</h3>
+                <p class="meta">PostgreSQL · SQLAlchemy · Next.js · React · AWS</p>
+              </header>
+              <p>
+                A HIPAA-aligned clinical operations platform used in a live home-health pilot,
+                serving clinician, patient, and mobile field workflows across the patient lifecycle.
+              </p>
+              <ul class="project-points">
+                <li>
+                  Designed FastAPI and async SQLAlchemy APIs for intake, scheduling, vitals,
+                  versioned clinical notes, escalation alerts, soft deletes, Alembic migrations, and
+                  PHI audit logging.
+                </li>
+                <li>
+                  Implemented C-CDA discharge XML ingestion with vendor-schema mapping, S3 KMS
+                  storage, Cognito auth, and AWS deployment across shared web/mobile clients.
+                </li>
+              </ul>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="pill">Healthcare</span>
+                  <span class="pill">Full-stack</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <a
+                class="project-media"
+                href="https://hsi.yale.edu/viewer"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open Hyperspectral Data Viewer"
+              >
+                <img
+                  src="assets/projects/hsi-viewer.png"
+                  alt="Hyperspectral Data Viewer upload interface"
+                  loading="lazy"
+                />
+              </a>
               <header>
                 <h3>Hyperspectral Imaging Ecosystem</h3>
                 <p class="meta">React.js · JavaScript · ENVI · GeoTIFF · AWS</p>
@@ -260,30 +334,59 @@
               </p>
               <ul class="project-points">
                 <li>
-                  Built core Assembler and Dashboard components that convert ENVI files to BIL, BIP,
-                  BSQ, GeoTIFF, and PNG formats.
+                  Building React-based dashboard tools for visualizing, transforming, and managing
+                  high-dimensional spectral image datasets.
                 </li>
                 <li>
-                  Designed an interface in React that makes it easy for researchers to explore data
-                  and repeat workflows.
+                  Building data conversion pipelines that standardize complex hyperspectral image
+                  files into formats researchers can process, compare, and share.
                 </li>
               </ul>
               <div class="project-footer">
-                <span class="pill">Research tooling</span>
-                <span class="pill">Data viz</span>
-                <a
-                  class="project-link"
-                  href="https://hsi.yale.edu/hsi-viewer"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="View Hyperspectral Imaging Ecosystem viewer"
-                >
-                  View platform
-                </a>
+                <div class="project-tags">
+                  <span class="pill">Research tooling</span>
+                  <span class="pill">Data viz</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link"
+                    href="https://hsi.yale.edu/viewer"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Live viewer</a
+                  >
+                  <a
+                    class="project-link"
+                    href="https://hsi.yale.edu/hsi-dashboard"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Dashboard</a
+                  >
+                  <a
+                    class="project-link"
+                    href="https://github.com/rusagara-ops/HSI-viewer"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </article>
 
             <article class="project-card">
+              <a
+                class="project-media"
+                href="https://youtu.be/SCK2uQfLqEk"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Watch facial recognition project demo"
+              >
+                <img
+                  src="assets/projects/facial-recognition.jpg"
+                  alt="Demo thumbnail for facial recognition with saliency maps"
+                  loading="lazy"
+                />
+              </a>
               <header>
                 <h3>Facial Recognition with Saliency Maps</h3>
                 <p class="meta">CNN · PyTorch · Captum · OpenCV · TensorFlow</p>
@@ -303,17 +406,26 @@
                 </li>
               </ul>
               <div class="project-footer">
-                <span class="pill">Computer vision</span>
-                <span class="pill">Model interpretability</span>
-                <a
-                  class="project-link"
-                  href="https://github.com/AI4ALL-Group-2/Labeled-Facial-Recognition-With-Saliency-Maps"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="View facial recognition and interpretability projects on Kevin's GitHub"
-                >
-                  View related work
-                </a>
+                <div class="project-tags">
+                  <span class="pill">Computer vision</span>
+                  <span class="pill">Model interpretability</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link"
+                    href="https://youtu.be/SCK2uQfLqEk"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Watch demo</a
+                  >
+                  <a
+                    class="project-link"
+                    href="https://github.com/AI4ALL-Group-2/Labeled-Facial-Recognition-With-Saliency-Maps"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </article>
 
@@ -337,17 +449,19 @@
                 </li>
               </ul>
               <div class="project-footer">
-                <span class="pill">APIs</span>
-                <span class="pill">Production</span>
-                <a
-                  class="project-link"
-                  href="https://github.com/rusagara-ops/Provigator-API"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="View Provigator API repository on GitHub"
-                >
-                  View on GitHub
-                </a>
+                <div class="project-tags">
+                  <span class="pill">APIs</span>
+                  <span class="pill">Production</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link"
+                    href="https://github.com/rusagara-ops/Provigator-API"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </article>
           </div>
@@ -360,42 +474,25 @@
             <p class="eyebrow">Coursework</p>
             <h2 id="coursework-title">Selected Yale courses</h2>
             <p class="section-kicker">
-              A snapshot of classes that shape how I think about computer science, AI, and their
-              impact on people.
+              Relevant coursework from my CS degree at Yale.
             </p>
           </div>
           <div class="section-body skills-grid">
             <div>
-              <h3>Core Computer Science</h3>
+              <h3>Systems &amp; Software</h3>
               <ul class="pill-list">
-                <li class="pill">Intro Computing &amp; Programming (CPSC 100)</li>
-                <li class="pill">C Programming Language &amp; Linux (CPSC 175)</li>
-                <li class="pill">Intro to Computer Science (CPSC 201)</li>
-                <li class="pill">Mathematical Tools for Computer Science (CPSC 202)</li>
-                <li class="pill">Data Structures &amp; Programming Techniques (CPSC 223)</li>
-                <li class="pill">Systems Programming &amp; Computer Organization (CPSC 3230)</li>
+                <li class="pill">Algorithms</li>
+                <li class="pill">Computer Architecture</li>
+                <li class="pill">Object-Oriented Programming</li>
+                <li class="pill">Distributed Systems</li>
+                <li class="pill">Compilers</li>
               </ul>
             </div>
             <div>
-              <h3>Algorithms, ML &amp; Decision Systems</h3>
+              <h3>AI &amp; Machine Learning</h3>
               <ul class="pill-list">
-                <li class="pill">Algorithms (CPSC 365)</li>
-                <li class="pill">Introduction to Machine Learning (CPSC 3810)</li>
-                <li class="pill">Law and Large Language Models (CPSC 4150)</li>
-                <li class="pill">Automated Decision Systems (CPSC 4580)</li>
-                <li class="pill">Intro Human-Computer Interaction (CPSC 4840)</li>
-                <li class="pill">Linear Algebra with Applications (MATH 2220)</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Broader Context &amp; Interests</h3>
-              <ul class="pill-list">
-                <li class="pill">Science of Modern Technology &amp; Public Policy (APHY 050)</li>
-                <li class="pill">Physics &amp; Public Policy (PHYS 3200)</li>
-                <li class="pill">Computer Science &amp; the Modern Intellectual Agenda (CPSC 150)</li>
-                <li class="pill">Introduction to Urban Studies (ARCH 160)</li>
-                <li class="pill">The Mystery of Sleep (CGSC 1750)</li>
-                <li class="pill">Race, Ethnicity, &amp; Immigration (SOCY 1700)</li>
+                <li class="pill">Artificial Intelligence</li>
+                <li class="pill">Machine Learning</li>
               </ul>
             </div>
           </div>
@@ -413,14 +510,10 @@
               <h3>Languages</h3>
               <ul class="pill-list">
                 <li class="pill">Python</li>
-                <li class="pill">TypeScript</li>
-                <li class="pill">C / C++</li>
-                <li class="pill">Swift</li>
                 <li class="pill">Java</li>
+                <li class="pill">C / C++</li>
                 <li class="pill">JavaScript</li>
-                <li class="pill">Racket</li>
                 <li class="pill">SQL</li>
-                <li class="pill">Bash</li>
               </ul>
             </div>
             <div>
@@ -428,26 +521,22 @@
               <ul class="pill-list">
                 <li class="pill">FastAPI</li>
                 <li class="pill">Flask</li>
+                <li class="pill">React</li>
                 <li class="pill">Spring Boot</li>
-                <li class="pill">React.js</li>
-                <li class="pill">Next.js</li>
-                <li class="pill">Bootstrap</li>
                 <li class="pill">PyTorch</li>
                 <li class="pill">TensorFlow</li>
+                <li class="pill">NumPy</li>
+                <li class="pill">FAISS</li>
+                <li class="pill">LangChain</li>
               </ul>
             </div>
             <div>
               <h3>Tools &amp; Platforms</h3>
               <ul class="pill-list">
-                <li class="pill">Git</li>
                 <li class="pill">AWS</li>
-                <li class="pill">Google Firebase</li>
+                <li class="pill">Docker</li>
+                <li class="pill">Git</li>
                 <li class="pill">Linux</li>
-                <li class="pill">Flask</li>
-                <li class="pill">OpenCV</li>
-                <li class="pill">Captum</li>
-                <li class="pill">NumPy</li>
-                <li class="pill">Matplotlib</li>
               </ul>
             </div>
           </div>
